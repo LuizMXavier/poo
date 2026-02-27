@@ -5,7 +5,8 @@
 * Luiz Felipe
 * Pedro Armando
 * Rodrigo Lopes
-* Thomaz Barros-
+* Thomaz Barros
+
 
 
 
