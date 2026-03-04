@@ -1,11 +1,12 @@
 --
 ## 🧑‍💻 Equipe
-* Caio Gilles
-* Heitor Didier
-* Luiz Felipe
-* Pedro Armando
-* Rodrigo Lopes
-* Thomaz Barros
+* Marcello Augusto
+* Matheus Conolly
+* Luiz Felipe 
+* Luiz Henrique 
+* Pedro Armando  
+* Paulo Nery
+
 
 
 
