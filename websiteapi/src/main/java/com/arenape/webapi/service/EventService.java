@@ -7,19 +7,16 @@ import com.arenape.webapi.entity.enums.EventStatus;
 import com.arenape.webapi.exception.BusinessException;
 import com.arenape.webapi.exception.ResourceNotFoundException;
 import com.arenape.webapi.repository.EventRepository;
-
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class EventService {
 
     private final EventRepository repository;
-
-    public EventService(EventRepository repository) {
-        this.repository = repository;
-    }
 
     public EventResponseDTO create(EventRequestDTO request) {
         Event event = new Event();
@@ -87,7 +84,8 @@ public class EventService {
                 event.getImageUrl(),
                 event.getPrice(),
                 event.getAvailableTickets(),
-                event.getStatus().name(),
+                event.getStatus() != null ? event.getStatus().name() : null,
+                event.getCategory() != null ? event.getCategory().name() : null,
                 event.getEventDate());
     }
 }
