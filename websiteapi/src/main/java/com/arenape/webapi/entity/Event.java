@@ -3,6 +3,7 @@ package com.arenape.webapi.entity;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import com.arenape.webapi.entity.enums.EventCategory;
 import com.arenape.webapi.entity.enums.EventStatus;
 
 import jakarta.persistence.Column;
@@ -50,6 +51,9 @@ public class Event {
 
     @Enumerated(EnumType.STRING)
     private EventStatus status;
+
+    @Enumerated(EnumType.STRING)
+    private EventCategory category;
 
     @PrePersist
     public void prePersist() {

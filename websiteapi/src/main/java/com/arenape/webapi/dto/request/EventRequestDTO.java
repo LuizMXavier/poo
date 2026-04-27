@@ -2,6 +2,8 @@ package com.arenape.webapi.dto.request;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Locale.Category;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -35,6 +37,9 @@ public record EventRequestDTO(
     @NotNull(message = "A quantidade de ingressos é obrigatória")
     @Min(value = 1, message = "Deve haver pelo menos 1 ingresso disponível")
     Integer availableTickets,
+
+    @NotBlank(message = "A categoria do evento é obrigatório")
+    String Category,
 
     @NotNull(message = "A data do evento é obrigatória")
     @Future(message = "A data do evento deve ser no futuro")
